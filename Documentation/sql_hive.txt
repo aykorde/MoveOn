@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS kinematics (c_date string , c_time string , username string , wrist int , activity int , acc_x float  , acc_y float  , acc_z float  , gyro_x float  , gyro_y float  , gyro_z float  )
+ COMMENT 'kin_Table'
+ ROW FORMAT DELIMITED
+ FIELDS TERMINATED BY ','
+tblproperties('skip.header.line.count'='1');
+
+LOAD DATA INPATH  '/user/talentum/Kinematics_Data.csv' INTO TABLE kinematics;

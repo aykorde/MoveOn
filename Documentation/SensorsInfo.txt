@@ -1,0 +1,28 @@
+IMU sensors like the MPU 6050 are used in self-balancing robots, UAVs, smartphones, and more. 
+IMU sensors help us get the position of an object attached to the sensor in three-dimensional space.
+These values are usually in angles to help us to determine its position.
+They are used to detect the orientation of smartphones, or in wearable gadgets like the Fitbit, which uses IMU sensors to track movement.
+
+We gathered such data and we have done time series analysis on data collected from ios device.
+
+ON such devices the x,y,z direction are given and measurements of acceleromer  are in multiples of g which is acceleration due to gravity which is 9.8 m/s**2
+and gyroscope readings are in degrees 
+
+Now depending on position of IMU sensors in phone they measure those values we need run a code to extract that data of sensors which is stored in registers on same ic that of sensors
+
+the range of values of gyroscope and accelerometers are dependent on settings of IMU they roughly range from
+For gyroscope  +-250 degree per second to +- 2000 degree per second based on that revolutions per seconds are calculated and values are stored inside register the selected range also has sensitivity and that is used while extracting data from registers
+
+For accelerometr +-2g to +-16g these devices measure force on each axis and convert in into value and while extracting data we divide those values by sensitivity and obtain values in multiples of g
+
+the details of range and sensitivity is provided on website of device model
+
+
+so depending on which model is used and how it is set in phone/smart watch the range of values change
+
+# Now coming to our problem since our data is machine generated we do not use validations we use maximum values 
+i.e accelerometer reading max value +-16
+
+gyroscope value we take range of +- 2000 
+
+so that our model must not crash  
