@@ -26,3 +26,6 @@ The whole project is built using 'Big Data Technologies' because data contains m
 * PowerBI dashboard : to visualize data
 
 Note : For hive table commands file name sql_hive.txt is uploaded and for setting hdfs files commands.sh is uploaded.
+
+# Implementation video
+* https://www.linkedin.com/posts/aykorde_project-pyspark-machinelearning-activity-6921774261321826304--DH9?utm_source=linkedin_share&utm_medium=member_desktop_web
